@@ -30,7 +30,7 @@ if question and api_key:
     if st.button("🔍 Ask"):
         with st.spinner("Retrieving → Reranking → Generating..."):
             response = requests.post(
-                "http://localhost:8000/ask",
+                "https://production-rag-bf4k.onrender.com/analyze",
                 data={"question": question, "api_key": api_key}
             )
             
